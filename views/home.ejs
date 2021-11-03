@@ -1,0 +1,78 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost:5000/styles/home.css">
+    <title>Stock Logger 📑</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="left">
+            <div class="header">
+                <h1>Stock Logger 📑</h1>
+            </div>
+            <div class="form">
+                <form action="/log" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Product Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="price" id="price" class="form-control" placeholder="Product Price">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Product Quantity">
+                    </div>
+                    <div class="form-group">
+                        <select name="type" id="type" class="form-control">
+                            <option value="">Category</option>
+                            <option value="Grocery">Grocery</option>
+                            <option value="Appliance">Appliance</option>
+                            <option value="Stationery">Stationery</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Gadget">Gadget</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="notes" id="notes" class="form-control" placeholder="Enter Notes"maxlength="150"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Add Product</button>
+                    <button type="clear" class="btn clear">Clear</button>
+                </form>
+            </div>
+        </section>
+        <section class="right">
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Product Price</th>
+                            <th>Product Quantity</th>
+                            <th>Category</th>
+                            <th>Notes</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>MacBook Pro 2021</td>
+                            <td>3000</td>
+                            <td>14</td>
+                            <td>Gadget</td>
+                            <td>Nice 😎</td>
+                            <td>
+                                <a href="" class="action">🖊</a>
+                                <a href="" class="action delete">🗑</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
